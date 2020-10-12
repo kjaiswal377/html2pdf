@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: kjaiswalhtmlpdf 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kjaiswalhtmlpdf
+  template:
+    metadata:
+      labels:
+        app: kjaiswalhtmlpdf 
+    spec:
+      containers:
+        - name: kjaiswalhtmlpdf 
+          image: azureforstudents.azurecr.io/kjaiswalhtmlpdf
+          ports:
+          - containerPort: 80
